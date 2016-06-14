@@ -1,9 +1,9 @@
 # [Ditto](ditto.us.com) / [IBM Watson](http://www.ibm.com/smarterplanet/us/en/ibmwatson/) Mashup Demo
 
 ## Getting started
-To run this application you will: 
+To run this application you will need to: 
 
-1. need to obtain API keys for [Ditto API](http://info.ditto.us.com/get-dittos-api) and [Watson API](https://www.ibm.com/smarterplanet/us/en/ibmwatson/developercloud/doc/getting_started/gs-credentials.shtml).
+1. obtain API keys for [Ditto API](http://info.ditto.us.com/get-dittos-api) and [Watson API](https://www.ibm.com/smarterplanet/us/en/ibmwatson/developercloud/doc/getting_started/gs-credentials.shtml).
 1. have [nodejs](http://nodejs.org) installed
 1. have [bower](https://bower.io/) installed
 
