@@ -2,7 +2,6 @@
 *#
 **/.idea/*
 
-client/global_with_keys.js
 client/global.js
 
 # Logs
