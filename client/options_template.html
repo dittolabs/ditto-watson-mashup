@@ -1,0 +1,16 @@
+<div class="options-section">
+
+	<h2>
+		{{pretty}} &nbsp;|
+		<a class="hide-show" ng-click="show_all()" ng-show="some_off()">Show All</a>
+	 	<a class="hide-show" ng-click="hide_all()" ng-show="any_on()">Hide All</a><br/>
+ 	</h2>
+
+ 	<label ng-repeat="option in data | orderBy:'sort_name'">
+    <input type="checkbox" ng-change="change_one()" ng-model="option.shown">
+	  <span>{{ option.pretty_name }} <span ng-show="option.shown">({{ option.match_count }})</span></span>
+ 	</label>
+
+</div>
+
+

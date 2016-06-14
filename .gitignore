@@ -1,0 +1,17 @@
+*~
+*#
+**/.idea/*
+
+client/global_with_keys.js
+client/global.js
+
+# Logs
+logs
+*.log
+
+# Dependency directory
+node_modules
+bower_components
+
+# Third Party
+.DS_Store

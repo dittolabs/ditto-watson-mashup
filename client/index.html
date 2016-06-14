@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html ng-app="Ditto.BlueMix">
+
+  <head>
+    <title>Ditto + IBM Watson</title>
+    <meta charset="utf-8" />
+    <link href="lib/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="css/main.css" rel="stylesheet" />
+  	<link href='http://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
+  </head>
+
+  <body ng-controller="ImageController as vm">
+
+    <!-- Header -->
+  	<header class="container-fluid row">
+  		<div class="header-wrapper fixed">
+  			<h1>
+          Ditto + IBM Watson <span class="sub-header">&nbsp;&nbsp;|&nbsp;&nbsp;Repo: <a href="https://github.com/dittolabs">https://github.com/dittolabs</a> &nbsp;&nbsp;|&nbsp;&nbsp; Developer Docs: <a href="http://dev.startditto.com/doc/social-stream-api-v2/endpoints">Social Stream API</a>, <a href="https://www.ibm.com/smarterplanet/us/en/ibmwatson/developercloud/visual-recognition/api/v3/#introduction">Visual Recognition API</a></span>
+        </h1>
+  		</div>
+  	</header>
+
+    <!-- Filters -->
+  	<div class="container-fluid row">
+  		<div class="col-md-3">
+  			<div class="filters col-md-3 fixed">
+
+  			<h3>Filters</h3>
+  				<form>
+  					<hide-all-show-all pretty="Brands" data="brands" ></hide-all-show-all>
+  					<hide-all-show-all pretty="Ages" data="ages" ></hide-all-show-all>
+  					<hide-all-show-all pretty="Genders" data="genders" ></hide-all-show-all>
+  					<hide-all-show-all pretty="Classifiers" data="labels" ></hide-all-show-all>
+  				</form>
+
+  			</div>
+  		</div>
+
+  		<!-- Photos -->
+  		<div masonry column-width="250" class="col-md-9">
+  	  		<div id="photos" class="masonry-brick" ng-repeat="photo in photolist()">
+  	    		<div class="image-wrapper col-xs-12 col-sm-6 col-md-4 col-lg-3"
+              ng-bind-html="photo.html" ng-show="photo.html" ui-view="content"></div>
+  	    	</div>
+  	    </div>
+  	</div>
+
+  </body>
+
+
+  <!-- using angular-masonry https://github.com/passy/angular-masonry -->
+  <script src="lib/jquery/dist/jquery.js"></script>
+  <script src="lib/jquery-bridget/jquery-bridget.js"></script>
+  <script src="lib/ev-emitter/ev-emitter.js"></script>
+  <script src="lib/desandro-matches-selector/matches-selector.js"></script>
+  <script src="lib/fizzy-ui-utils/utils.js"></script>
+  <script src="lib/get-size/get-size.js"></script>
+  <script src="lib/outlayer/item.js"></script>
+  <script src="lib/outlayer/outlayer.js"></script>
+  <script src="lib/masonry/masonry.js"></script>
+  <script src="lib/imagesloaded/imagesloaded.js"></script>
+  <script src="lib/angular/angular.js"></script>
+  <script src="lib/angular-sanitize/angular-sanitize.js"></script>
+  <script src="lib/angular-bootstrap/ui-bootstrap-tpls.js"></script>
+  <script src="lib/angular-masonry/angular-masonry.js"></script>
+
+  <script src="app.js"></script>
+  <script src="imageController.js"></script>
+  <script src="global.js"></script>
+  <script src="ditto.js"></script>
+  <script src="ibm.js"></script>
+  <script src="twitter.js"></script>
+
+  <script>
+    window.twttr = (function(d, s, id) {
+      var js, fjs = d.getElementsByTagName(s)[0],
+        t = window.twttr || {};
+
+      if (d.getElementById(id)) return t;
+      js = d.createElement(s);
+      js.id = id;
+      js.src = "https://platform.twitter.com/widgets.js";
+      fjs.parentNode.insertBefore(js, fjs);
+
+      t._e = [];
+      t.ready = function(f) {
+        t._e.push(f);
+      };
+
+      return t;
+    }(document, "script", "twitter-wjs"));
+  </script>
+
+</html>
