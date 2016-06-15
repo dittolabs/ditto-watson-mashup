@@ -63,17 +63,6 @@ a, a:visited {
 	color: #fff;
 }
 
-@media (min-width: 992px) {
-  .fixed {
-    position: fixed;
-  }
-
-  .sub-header {
-    display: inline;
-  }
-}
-
-
 /* Header */
 header {
 	height: 87px;
@@ -158,5 +147,16 @@ h2 {
 
 #photos {
 	margin-left: 20px;
+}
+
+
+@media (min-width: 991px) {
+  .fixed {
+    position: fixed;
+  }
+
+  .sub-header {
+    display: inline;
+  }
 }
 

@@ -2,7 +2,7 @@
 
 angular.module('Ditto.BlueMix').service('Ditto', ['$http', 'IBM', 'Twitter', function($http, IBM, Twitter) {
 
-	this.nimages = 1000;               // Maximum number of images to retrieve from Ditto
+	this.nimages = 2000;               // Maximum number of images to retrieve from Ditto
 	this.safe_for_work_threshold = 0.6;
 	this.label_threshold = 0.4;
 	this.start_days_back = 1;

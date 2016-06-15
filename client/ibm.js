@@ -49,8 +49,11 @@ angular.module('Ditto.BlueMix').service('IBM', ['$http', function($http) {
 	}
 
 	this.photo_add_ibm_data = function(photo) {
+
     if (photo.ibm) {
+
   		if (photo.ibm.images && photo.ibm.images[0].faces && photo.ibm.images[0].faces.length > 0) {
+
 		    var faces = photo.ibm.images[0].faces;
 		    photo.ages = [];
 		    photo.genders = [];
@@ -148,6 +151,7 @@ angular.module('Ditto.BlueMix').service('IBM', ['$http', function($http) {
     $http.get(url)
 
     .success(function(data) {
+
       photo.ibm = data;
 
       if (data.error || (data.status && data.status == "ERROR")) {
@@ -168,6 +172,7 @@ angular.module('Ditto.BlueMix').service('IBM', ['$http', function($http) {
 
       } else {
     		self.photo_add_ibm_data(photo);
+
     		if (self.use_local_storage) {
     		    localStorage.setItem(url, JSON.stringify(data));
     		}
