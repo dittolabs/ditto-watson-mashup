@@ -24,8 +24,7 @@ To run this application you will need to:
   ```
   $ bower install
   ```
-1. Modify `client/ditto.js` with the `client_id` supplied by Ditto
-1. Modify `client/ibm.js` with the `apikey` supplied by IBM.
+1. Modify `client/global.js` with the `ditto_client_id` supplied by Ditto and the `ibm_api_key` supplied by IBM.
 1. Start the node server: 
 
   ```
